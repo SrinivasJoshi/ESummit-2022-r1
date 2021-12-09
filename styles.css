@@ -76,7 +76,55 @@ nav{
     font-weight: 700;
     transition: .3s ease-in-out ;
 }
-.hero-text button:hover{
+.hero-text button:hover, .etalks-text button:hover{
     transition: .3s ease-in-out ;
     letter-spacing: 3px;
+    cursor: pointer;
+}
+
+/*E-Talks*/
+.etalks-section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 10rem 5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.etalks-text {
+    color: var(--dark-bg);
+    font-size: 3.5rem;
+    font-weight: 950;
+}
+.etalks-text .main{
+    color: var(--med-bg);
+}
+.etalks-text p, .epitch-text p{
+    margin: 2rem 0 0 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(110, 110, 110);
+}
+.etalks-text button{
+    margin-top: 5rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 100px;
+    background-color: var(--light-bg);
+    color: white;
+    border: none;
+    font-weight: 700;
+    transition: .3s ease-in-out ;
+}
+
+/*E-Pitch*/
+.epitch-section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 10rem 5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.epitch-text h1{
+    font-size: 4rem;
+    font-size: 900;
+    color: var(--med-bg);
 }
