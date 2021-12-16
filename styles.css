@@ -179,3 +179,43 @@ nav{
     transition: .3s ease-in-out ;
 }
 /* E-Pitch Accordian - dropdown */
+
+.HeadingWorkshop{
+    font-size: 50px;
+    text-align: center;
+    color: #25756A;
+    padding-top: 10%;
+}
+
+.WoskshopHolder{
+    font-family: 'Raleway';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+
+.topLeft{
+    margin-bottom: 20%;
+}
+
+.topRight{
+    margin-bottom: 20%;
+}
