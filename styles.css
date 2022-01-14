@@ -5,19 +5,15 @@
     font-family: 'Raleway', sans-serif;
     z-index: 0;
 }
+html{
+    overflow-x: hidden;
+}
 
 :root{
     font-size: 10px;
     --dark-bg: #002c26;
     --light-bg : #56BF92;
     --med-bg: #25756A;
-}
-
-.hero-section{
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--dark-bg);
-    padding: 1rem 2rem;
 }
 nav{
     display: flex;
@@ -27,6 +23,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 10;
     background-color: var(--dark-bg);
 }
@@ -70,16 +67,41 @@ nav{
 .notVisible{
     display: none;
 }
+.hero-section{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--dark-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .hero-text{
-    min-height: 50vh;
+    /* min-height: 50vh;
     width: 40%;
     position: absolute;
     left: -4rem;
-    top: 20vh;
+    top: 20vh; */
+    width: 50vw;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+.hero-img{
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    max-height: 100vh;
+    z-index: 0;
+    overflow-y: hidden;
+    overflow: hidden;
+}
+.hero-img img{
+    max-height: 100%;
+    transform: translateY(-5rem);
 }
 .hero-text h1{
     color: #f5f5f5;
@@ -100,6 +122,7 @@ nav{
     text-align: center;
 }
 .hero-text button{
+    font-size: 2rem;
     padding: 1.2rem 1.5rem;
     border-radius: 100px;
     background-color: var(--light-bg);
@@ -116,6 +139,7 @@ nav{
 
 /*E-Talks*/
 .etalks-section{
+    z-index: 2;
     min-height: 100vh;
     width: 100%;
     padding: 10rem 5rem;
@@ -160,8 +184,16 @@ nav{
     min-height: 100vh;
     width: 100%;
     padding: 10rem 5rem;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.epitch-text{
+    width: 50%;
+}
+.epitch-section div:nth-of-type(1) img{
+    width: 90%;
+    padding: 0 2rem;
 }
 .epitch-text h1{
     font-size: 4rem;
@@ -218,4 +250,99 @@ nav{
 
 .topRight{
     margin-bottom: 20%;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+    .epitch-text{
+        width: 70%;
+    }
+    .epitch-section div:nth-of-type(1) img{
+        width: 80%;
+        padding: 0 2rem;
+    }
+    .etalks-text h1{
+        font-size: 3.2rem;
+    }
+    .hero-text{
+        width: 60vw;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .epitch-section div:nth-of-type(1){
+        width: 80%;
+    }
+    .etalks-text h1{
+        font-size: 3rem;
+    }
+    .etalks-text p{
+        font-size: 1.5rem;
+    }
+    .hero-img{
+        display: none;
+    }
+    .hero-text{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    :root{
+        font-size: 9px;
+    }
+    .epitch-section{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 4rem;
+    }
+    .epitch-section div:nth-of-type(1){
+        width: 100%;
+    }
+    .epitch-text{
+        width: 100%;
+    }
+    .etalks-section{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .etalks-img img{
+        width: 80%;
+        top: 0;
+        left: 0;
+    }
+    .etalks-text h1{
+        font-size: 3.2rem;
+    }
+    .etalks-text p{
+        font-size: 1.7rem;
+    }
+
+}
+@media only screen and (max-width: 480px) {
+    :root{
+        font-size: 9px;
+    }
+    .epitch-section{
+        padding: 2rem 4rem;
+    }
+    .hero-text h1{
+        font-size: 4rem;
+    }
+    .hero-text h4{
+        font-size: 3rem;
+    }
+    .hero-text p{
+        font-size: 2rem;
+    }
+    .hero-text button{
+        font-family: 4rem;
+    }
+    .etalks-section{
+        min-height: 90vh;
+        justify-content: space-around;
+    }
 }
