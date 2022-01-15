@@ -131,7 +131,8 @@ nav{
     font-weight: 700;
     transition: .3s ease-in-out ;
 }
-.hero-text button:hover, .etalks-text button:hover,.epitch-text button:hover{
+.hero-text button:hover, .etalks-text button:hover,.epitch-text button:hover, 
+.panel-content button:hover{
     transition: .3s ease-in-out ;
     letter-spacing: 2px;
     cursor: pointer;
@@ -157,7 +158,7 @@ nav{
 .etalks-text p, .epitch-text p{
     margin: 2rem 0 0 0;
     font-size: 1.7rem;
-    font-weight: bold;
+    font-weight: 500;
     color: rgb(110, 110, 110);
     width: 90%;
 }
@@ -180,7 +181,7 @@ nav{
 }
 
 /*E-Pitch*/
-.epitch-section{
+/* .epitch-section{
     min-height: 100vh;
     width: 100%;
     padding: 10rem 5rem;
@@ -209,7 +210,7 @@ nav{
     border: none;
     font-weight: 700;
     transition: .3s ease-in-out ;
-}
+} */
 /* E-Pitch Accordian - dropdown */
 
 .HeadingWorkshop{
@@ -251,6 +252,63 @@ nav{
 .topRight{
     margin-bottom: 20%;
 }
+.panel-dis{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    max-height: 85vh;
+    width: 100%;
+    padding: 10rem 3rem;
+}
+.panel-dis h1{
+    font-size: 3.5rem;
+    color: var(--med-bg);
+}
+.main-panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.panel-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel-img img{
+    width: 100%;
+}
+.panel-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+}
+.panel-content h2{
+    font-size: 3rem;
+    color: var(--light-bg);
+    align-self: flex-start;
+    margin-bottom: 2rem;
+}
+.panel-content p{
+    font-size: 1.7rem;
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+.panel-content button{
+    padding: 1.2rem 1.5rem;
+    border-radius: 100px;
+    background-color: var(--light-bg);
+    color: white;
+    border: none;
+    font-weight: 700;
+    transition: .3s ease-in-out ;
+    align-self: flex-start;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 900px) {
@@ -266,6 +324,15 @@ nav{
     }
     .hero-text{
         width: 60vw;
+    }
+    .panel-dis{
+        min-height: 90vh;
+        max-height: 95vh;
+        width: 100%;
+        padding: 8rem 3rem;
+    }
+    .panel-img{
+        width: 50%;
     }
   }
   @media only screen and (max-width: 768px) {
@@ -283,6 +350,19 @@ nav{
     }
     .hero-text{
         width: 100%;
+    }
+    .panel-dis {
+        justify-content: space-evenly;
+        padding: 5rem 2rem;
+    }
+    .panel-dis h1{
+        font-size: 2.7rem;
+    }
+    .panel-content h2{
+        font-size: 2.5rem;
+    }
+    .panel-content p{
+        font-size: 1.5rem;
     }
 
 }
@@ -320,6 +400,18 @@ nav{
     .etalks-text p{
         font-size: 1.7rem;
     }
+    .panel-dis{
+        padding: 5rem;
+    }
+    .main-panel{
+        flex-direction: column;
+    }
+    .panel-content{
+        width: 100%;
+    }
+    .panel-img{
+        width: 70%;
+    }
 
 }
 @media only screen and (max-width: 480px) {
@@ -344,5 +436,14 @@ nav{
     .etalks-section{
         min-height: 90vh;
         justify-content: space-around;
+    }
+    .panel-dis h1{
+        font-size: 3.2rem;
+    }
+    .panel-content h2{
+        font-size: 2.5rem;
+    }
+    .panel-content p{
+        font-size: 2rem;
     }
 }
