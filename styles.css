@@ -266,14 +266,13 @@ nav{
     font-size: 3.5rem;
     color: #25756A;
 }
-.workshops .main p{
+/*.workshops .main p{
     font-size: 1.5rem;
     font-weight: 400;
     margin: 30px 0;
     line-height: 2rem;
-    color: rgb(114, 114, 114);
- 
-}
+    color: rgb(114, 114, 114); 
+}*/
 .workshops img{
     width: 100%;
 }
@@ -312,7 +311,8 @@ nav{
 }
 .workshop-link:hover{
     transition: .4s;
-    transform: scale(1.1);
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 /*Competitions*/
@@ -333,16 +333,17 @@ nav{
     align-items: center;
 }
 .card {
-    width: 28%;
+    width: 30%;
 }
 .competitions img{
     width: 100%;
 }
 .card-desc{
     padding: 20px 40px 30px 40px;
+    height: 170px;
 }
 .competitions p{
-    font-size:1.3rem;
+    font-size:1.5rem;
     /*letter-spacing: 0.1rem;*/
 }
 .competitions h2{
@@ -363,7 +364,6 @@ nav{
     background-color: #3b8076;
     cursor: pointer;
 }
-/**********************************************/
 
 .panel-dis{
     display: flex;
@@ -497,6 +497,7 @@ nav{
     }
     .workshop1, .workshop2, .workshop3{
         grid-template-columns: 100%;
+        margin: 100px 0%;
     }
     .workshops .left, .workshops .right{
         margin-top: 30px;
@@ -510,14 +511,14 @@ nav{
     .workshops img{
         display: block;
         margin: auto;
-        width: 60%;
+        width: 80%;
     }
 
     .row1-container, .row2-container {
         flex-direction: column;
     }
     .card {
-        width: 60%;
+        width: 80%;
     }
 
     .panel-dis {
@@ -581,6 +582,7 @@ nav{
     .panel-img{
         width: 70%;
     }
+
 
 }
 @media only screen and (max-width: 480px) {
