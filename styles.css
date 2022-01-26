@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
     z-index: 0;
 }
 html{
@@ -19,7 +20,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -213,7 +214,7 @@ nav{
 } */
 /* E-Pitch Accordian - dropdown */
 
-.HeadingWorkshop{
+/*.HeadingWorkshop{
     font-size: 50px;
     text-align: center;
     color: #25756A;
@@ -251,7 +252,119 @@ nav{
 
 .topRight{
     margin-bottom: 20%;
+}*/
+
+/*Workshops*/
+.workshops{
+    margin-top: 50px;
 }
+.workshops .main{
+    text-align: center;
+    margin: 0 40% 10rem 40%;
+}
+.workshops .main h1{
+    font-size: 3.5rem;
+    color: #25756A;
+}
+.workshops .main p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 30px 0;
+    line-height: 2rem;
+    color: rgb(114, 114, 114);
+ 
+}
+.workshops img{
+    width: 100%;
+}
+.workshop1, .workshop2, .workshop3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 100px 8%;
+}
+
+.workshops .left, .workshops .right{
+    padding: 0 5rem;
+}
+.text-free{
+    color: gray;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.workshop-title{
+    color: #25756A;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.workshop-desc{
+    font-size: 1.45rem;
+    color: #002c26;
+    line-height: 2.7rem;
+    /*letter-spacing: 0.1rem;*/
+    margin: 2rem 0;
+}
+.workshop-link{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #25756A;
+    text-decoration: none;
+}
+.workshop-link:hover{
+    transition: .4s;
+    transform: scale(1.1);
+}
+
+/*Competitions*/
+.competitions h1{
+    font-size: 3.5rem;
+    color: #25756A;
+    text-align: center;
+    margin: 6rem 0 5rem 0;
+}
+.card {
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 30px 30px 0px;;
+    margin: 20px; 
+}
+.row1-container, .row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 28%;
+}
+.competitions img{
+    width: 100%;
+}
+.card-desc{
+    padding: 20px 40px 30px 40px;
+}
+.competitions p{
+    font-size:1.3rem;
+    /*letter-spacing: 0.1rem;*/
+}
+.competitions h2{
+    font-size: 2.4rem;
+    margin: 10px 0;
+    color: #56BF92;
+}
+.competitions button{
+   width: 100%;
+   color: white;
+   font-size: 2rem;
+   background-color: var(--med-bg);
+   border: none;
+   height: 50px;
+   border-radius: 0 0 20px 20px;
+}
+.competitions button:hover{
+    background-color: #3b8076;
+    cursor: pointer;
+}
+/**********************************************/
+
 .panel-dis{
     display: flex;
     flex-direction: column;
@@ -310,8 +423,13 @@ nav{
     align-self: flex-start;
 }
 
+
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 900px) {
+    nav{
+        height: 10vh;
+    }
     .epitch-text{
         width: 70%;
     }
@@ -325,6 +443,9 @@ nav{
     .hero-text{
         width: 60vw;
     }
+    .card {
+        width: 70%;
+    }
     .panel-dis{
         min-height: 90vh;
         max-height: 95vh;
@@ -332,7 +453,7 @@ nav{
         padding: 8rem 3rem;
     }
     .panel-img{
-        width: 50%;
+        width: 45%;
     }
   }
   @media only screen and (max-width: 768px) {
@@ -351,6 +472,54 @@ nav{
     .hero-text{
         width: 100%;
     }
+    .panel-dis {
+        justify-content: space-evenly;
+        padding: 5rem 2rem;
+    }
+    .panel-dis h1{
+        font-size: 2.7rem;
+    }
+    .panel-content h2{
+        font-size: 2.5rem;
+    }
+    .panel-content p{
+        font-size: 1.5rem;
+    }
+
+    /*workshops*/
+    .workshops{
+        margin-top: 0;
+    }
+    .workshops .main{
+        padding: 10px 0;
+        margin: 30px 20%;
+        text-align: center;
+    }
+    .workshop1, .workshop2, .workshop3{
+        grid-template-columns: 100%;
+    }
+    .workshops .left, .workshops .right{
+        margin-top: 30px;
+    }
+    .workshop2 img{
+        order: 1;
+    }
+    .workshop2 .left{
+        order: 2;
+    }
+    .workshops img{
+        display: block;
+        margin: auto;
+        width: 60%;
+    }
+
+    .row1-container, .row2-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 60%;
+    }
+
     .panel-dis {
         justify-content: space-evenly;
         padding: 5rem 2rem;
