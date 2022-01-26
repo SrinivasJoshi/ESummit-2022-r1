@@ -21,7 +21,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 11vh;
+    height: 12vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -202,13 +202,13 @@ nav{
     transition: .3s ease-in-out ;
     cursor: pointer;
 }
-.etalks-img img{
+/*.etalks-img img{
     width: 100%;
     height: 90%;
-    position: relative;
-    top: -5rem;
+    /*position: relative;*/
+   /* top: -5rem;
     left: 3rem;
-}
+}*/
 
 /*E-Pitch*/
 /* .epitch-section{
@@ -241,55 +241,13 @@ nav{
     font-weight: 700;
     transition: .3s ease-in-out ;
 } */
-/* E-Pitch Accordian - dropdown */
-
-/*.HeadingWorkshop{
-    font-size: 50px;
-    text-align: center;
-    color: #25756A;
-    padding-top: 10%;
-}
-
-.WoskshopHolder{
-    font-family: 'Raleway';
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 0.05em;
-}
-
-.right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10%;
-}
-
-.left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10%;
-}
-
-.topLeft{
-    margin-bottom: 20%;
-}
-
-.topRight{
-    margin-bottom: 20%;
-}*/
 
 /*Workshops*/
 .workshops{
-    margin-top: 50px;
+    margin: 100px 0;
 }
 .workshops .main{
     text-align: center;
-    margin: 0 40% 10rem 40%;
 }
 .workshops .main h1{
     font-size: 3.5rem;
@@ -303,14 +261,29 @@ nav{
     color: rgb(114, 114, 114); 
 }*/
 .workshops img{
-    width: 100%;
+    width: 55%;
+    box-shadow: rgba(166, 165, 167, 0.15) 0px 0px 10px 10px;;
 }
-.workshop1, .workshop2, .workshop3{
+.workshop4 img{
+    width: 64%;
+}
+.workshop1,.workshop2, .workshop3, .workshop4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+    margin-top: 30px;
+}
+/* .workshop1 img{
+    width: 45%;
+} */
+ /* .workshop2, .workshop3{
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 100px 8%;
-}
-
+} 
+*/
 .workshops .left, .workshops .right{
     padding: 0 5rem;
 }
@@ -342,10 +315,15 @@ nav{
     cursor: pointer;
     transition: .3s ease-in-out ;
     padding: 1.2rem 1.5rem;
+    margin-top: 3rem;
 }
 
 
 /*Competitions*/
+.competitions{
+    margin-bottom: 40px;
+}
+
 .competitions h1{
     font-size: 3.5rem;
     color: #25756A;
@@ -367,6 +345,7 @@ nav{
 }
 .competitions img{
     width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 .card-desc{
     padding: 20px 40px 30px 40px;
@@ -395,7 +374,7 @@ nav{
     cursor: pointer;
 }
 
-.panel-dis{
+/*.panel-dis{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -451,6 +430,54 @@ nav{
     font-weight: 700;
     transition: .3s ease-in-out ;
     align-self: flex-start;
+}*/
+footer{
+    background-color: #002c26;
+    color: white;
+}
+footer h1{
+    text-align: center;
+    margin: 0 auto;
+    padding: 70px 0 50px 0;
+    font-size: 2.8rem;
+    letter-spacing: 0.1rem;
+}
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 10px auto;   
+    width: 50%;
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+}
+footer li:hover{
+    cursor: pointer;
+}
+footer p{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 60px;
+}
+
+footer .icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    width: 20%;
+}
+footer .icons a{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.copyright{
+    font-size: 1.5rem;
+    color: gray;
+    padding-bottom: 50px;
 }
 
 
@@ -525,7 +552,7 @@ nav{
     }
 
     /*workshops*/
-    .workshops{
+    /* .workshops{
         margin-top: 0;
     }
     .workshops .main{
@@ -546,11 +573,11 @@ nav{
     .workshop2 .left{
         order: 2;
     }
+    
+    */
     .workshops img{
-        display: block;
-        margin: auto;
-        width: 80%;
-    }
+        width: 70%;
+    } 
 
     .row1-container, .row2-container {
         flex-direction: column;
@@ -571,6 +598,16 @@ nav{
     }
     .panel-content p{
         font-size: 1.5rem;
+    }
+    footer ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer li{
+        margin-bottom: 15px;
+    }
+    footer .icons a{
+        margin: 0 10px;
     }
 
 }
@@ -610,6 +647,10 @@ nav{
         width: 70%;
     }
 
+    .workshop4 img{
+        width: 80%;
+    }
+
 
 }
 @media only screen and (max-width: 480px) {
@@ -639,7 +680,7 @@ nav{
         justify-content: space-around;
     }
     .speaker div{
-        width: 120%;
+        width: 100%;
         padding: 1rem;
     }
     .speaker div:nth-of-type(2){
@@ -659,5 +700,18 @@ nav{
     }
     .panel-content p{
         font-size: 2rem;
+    }
+    .workshops{
+        padding: 0 2rem;
+    }
+    .workshops .main h1{
+        font-size: 3rem;
+    }
+    .workshops img{
+        width: 100%;
+    }
+
+    .workshop4 img{
+        width: 135%;
     }
 }
