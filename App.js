@@ -17,5 +17,4 @@ navLinks[0].addEventListener("click",cancelFun);
 navLinks[1].addEventListener("click",cancelFun);
 navLinks[2].addEventListener("click",cancelFun);
 navLinks[3].addEventListener("click",cancelFun);
-navLinks[4].addEventListener("click",cancelFun);
 cancelBtn.addEventListener("click",cancelFun);
